@@ -1,7 +1,7 @@
 # 0x09. Web infrastructure design
 
-```DevOps```SysAdmin```web infrastructure```
-``` 
+```DevOps``````SysAdmin``````web infrastructure```
+ 
 For this project, we expect you to look at these concepts:
 
 - [DNS](https://intranet.alxswe.com/concepts/12)
