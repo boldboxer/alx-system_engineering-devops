@@ -1,13 +1,12 @@
-#!/usr/bin/env bash
 # Turns off password authentication and uses school key
+file_line { 'Turn off passwd auth':
+  ensure => 'present',
+  path   => '/etc/ssh/ssh_config',
+  line   => '    PasswordAuthentication no',
+}
 
-file { 'etc/ssh/ssh_config':
-	ensure => present,
-
-content =>"
-	#ssh client configuration
-	host*
-	IdentityFile ~/.ssh/school
-	PasswordAuthentication no
-	",
+file_line { 'Declare identity file':
+  ensure => 'present',
+  path   => '/etc/ssh/ssh_config',
+  line   => '    IdentityFile ~/.ssh/school',
 }
